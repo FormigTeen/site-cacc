@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
 
-    <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}"">
+    <link rel="stylesheet" href="{{ $page->baseUrl . mix('css/main.css', 'assets/build') }}"">
 
     <!-- Favicon-->
     <link rel="shortcut icon" href="img/favicon.ico">
@@ -42,12 +42,12 @@
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
                 <div class="navbar-nav ml-auto">
                     <div class="nav-item">
-                        <a href="{{ $page->ROUTES['home'] }}" class="nav-link {{ $page->isActive($page->ROUTES['home']) }}">
+                        <a href="{{ $page->baseUrl . $page->ROUTES['home'] }}" class="nav-link {{ $page->isActive($page->baseUrl . $page->ROUTES['home']) }}">
                             Home <span class="sr-only">(current)</span>
                         </a>
                     </div>
                     <div class="nav-item">
-                        <a href="{{ $page->ROUTES['teachers'] }}" class="nav-link {{ $page->isActive($page->ROUTES['teachers']) }}">
+                        <a href="{{ $page->baseUrl . $page->ROUTES['teachers'] }}" class="nav-link {{ $page->isActive($page->baseUrl . $page->ROUTES['teachers']) }}">
                             Professores <span class="sr-only">(current)</span>
                         </a>
                     </div>
@@ -573,9 +573,9 @@
     </div>
 </footer>
 <!-- JavaScript files-->
-<script src="{{ mix('/js/manifest.js', 'assets/build') }}"></script>
-<script src="{{ mix('/js/vendor.js', 'assets/build') }}"></script>
-<script src="{{ mix('/js/main.js', 'assets/build') }}"></script>
+<script src="{{ $page->baseUrl . mix('/js/manifest.js', 'assets/build') }}"></script>
+<script src="{{ $page->baseUrl . mix('/js/vendor.js', 'assets/build') }}"></script>
+<script src="{{ $page->baseUrl . mix('/js/main.js', 'assets/build') }}"></script>
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
 <!---->
 <script>
