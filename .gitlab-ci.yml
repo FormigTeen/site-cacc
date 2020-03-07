@@ -2,9 +2,9 @@ image: php:7.2
 
 before_script:
   - curl -sS https://getcomposer.org/installer | php
-  - curl -sL https://deb.nodesource.com/setup_6.x | bash -
+  - curl -sL https://deb.nodesource.com/setup_10.x | bash -
   - apt-get update -yqq
-  - apt-get install zlib1g-dev git node nodejs npm -yqq
+  - apt-get install zlib1g-dev git nodejs -yqq
   - docker-php-ext-install zip
   - php composer.phar install
   - npm install -g gulp && npm install
