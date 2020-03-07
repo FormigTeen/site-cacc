@@ -2,6 +2,8 @@
 
 use TightenCo\Jigsaw\Jigsaw;
 
+setlocale (LC_ALL, 'pt_BR');
+
 /** @var $container \Illuminate\Container\Container */
 /** @var $events \TightenCo\Jigsaw\Events\EventBus */
 
@@ -15,3 +17,9 @@ use TightenCo\Jigsaw\Jigsaw;
  *     // Your code here
  * });
  */
+\App\Listeners\AddCategoryPages::register($container);
+
+$events->afterCollections(function ($jigsaw) use ($container) {
+    $container->make(\App\Listeners\AddCategoryPages::class)->handle($jigsaw);
+});
+

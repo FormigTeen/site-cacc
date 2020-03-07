@@ -30,10 +30,15 @@ return [
         'home' => '/',
         'teachers' => '/professores',
         'courses' => '/cursos',
+        'blog' => '/blog',
     ],
 
     'isActive' => function ($page, $path) {
         return ( $page->getUrl() ===  $path ? "active" : "" );
+    },
+
+    'dateToStr' => function ($page, $date) {
+        return Carbon\Carbon::createFromFormat('d/m/Y', $date)->format('d \d\e F \d\e Y');
     },
 
     'collections' => [
@@ -44,6 +49,10 @@ return [
         'cursos' => [
             'path' => '{collection}/{-title}',
             'sort' => 'title',
+        ],
+        'posts' => [
+            'path' => 'blog/post/{-title}',
+            'sort' => 'date',
         ],
     ],
 ];

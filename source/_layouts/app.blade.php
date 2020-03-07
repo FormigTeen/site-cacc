@@ -56,6 +56,11 @@
                             Professores <span class="sr-only">(current)</span>
                         </a>
                     </div>
+                    <div class="nav-item">
+                        <a href="{{ $page->baseUrl . $page->ROUTES['blog'] }}" class="nav-link {{ $page->isActive($page->baseUrl . $page->ROUTES['blog']) }}">
+                            Blog <span class="sr-only">(current)</span>
+                        </a>
+                    </div>
                     <!-- multi-level dropdown-->
 {{--                    <div class="nav-item dropdown"><a id="navbarDropdownMenuLink" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">Dropdown <i class="fa fa-angle-down"></i></a>--}}
 {{--                        <ul aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">--}}
