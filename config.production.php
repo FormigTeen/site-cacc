@@ -2,5 +2,5 @@
 
 return [
     'production' => true,
-    'base' => '/dcc-ufba-site',
+    'baseUrl' => '/dcc-ufba-site',
 ];
