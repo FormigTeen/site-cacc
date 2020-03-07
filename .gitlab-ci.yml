@@ -1,9 +1,8 @@
-image: composer
+image: awhalen/docker-php-composer-node
 
 before_script:
-  - dnf install nodejs node npm
-  - npm install
   - composer install
+  - npm install
 
 cache:
   paths:
