@@ -16,7 +16,7 @@ cache:
 
 pages:
   script:
-    - npm run deploy
+    - npm run prod
     - mv build_production/ public/
   artifacts:
     paths:
