@@ -20,7 +20,7 @@ title: Professores
                                     <p class="teacher-quote">
                                         "{{ $teacher->quote }}"
                                     </p>
-                                    <a href="{{ $page->baseUrl . $teacher->getUrl() }}" class="teacher-name">
+                                    <a href="{{ $teacher->getUrl() }}" class="teacher-name">
                                         <h3 class="h5 mb-0 teacher">{{ $teacher->name }}</h3></a><span class="teacher-field">{{ $teacher->short_description }}</span>
                                         <ul class="social list-inline">
                                             @isset($teacher['social_media']['email'])
@@ -28,7 +28,7 @@ title: Professores
                                             @endisset
                                         </ul>
                                         <p class="teacher-see-profile">
-                                            <a href="{{ $page->baseUrl . $teacher->getUrl() }}" class="btn btn-outline-light">Perfil</a>
+                                            <a href="{{ $teacher->getUrl() }}" class="btn btn-outline-light">Perfil</a>
                                             @isset($teacher['lates_url'])
                                                 <a href="{{ $teacher->lates_url }}" class="btn btn-outline-light">Lates</a>
                                             @endisset

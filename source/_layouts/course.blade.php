@@ -52,7 +52,7 @@
                     <div class="course">
                         <div class="course-image"><img src="{{ $course->banner_url }}" alt="{{ $course->title }}">
                             <div class="overlay flex-column d-flex align-items-center justify-content-center">
-                                <a href="{{ $page->baseUrl . $course->getUrl() }}" class="watch-btn"><i class="fa fa-eye"></i>Veja Mais</a>
+                                <a href="{{ $course->getUrl() }}" class="watch-btn"><i class="fa fa-eye"></i>Veja Mais</a>
                             </div>
                         </div>
                         <div class="course-header pb-1"><a href="course-detail.html" class="no-anchor-style">

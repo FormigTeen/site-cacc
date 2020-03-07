@@ -15,14 +15,14 @@ title: Cursos
                             <div class="course-image">
                                 <img src="{{ $course->banner_url }}" alt="{{ $course->title }}">
                                 <div class="overlay flex-column d-flex align-items-center justify-content-center">
-                                    <a href="{{ $page->baseUrl . $course->getUrl() }}" class="watch-btn">
+                                    <a href="{{  $course->getUrl() }}" class="watch-btn">
                                         <i class="fa fa-eye">
                                         </i>Mais Detalhes
                                     </a>
                                 </div>
                             </div>
                             <div class="course-header pb-1">
-                                <a href="{{ $page->baseUrl . $course->getUrl() }}" class="no-anchor-style">
+                                <a href="{{ $course->getUrl() }}" class="no-anchor-style">
                                 <h3 class="h5">{{ $course->title }}</h3></a>
                                 <div class="d-flex align-items-center justify-content-between">
                                     <div class="category"><i class="fa fa-tags"></i><a href="#">{{ $course->category }}</a></div>
