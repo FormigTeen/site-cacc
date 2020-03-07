@@ -24,11 +24,12 @@ return [
 //        'telegram' => '',
     ],
 
-    'logo_url' => 'https://lh3.googleusercontent.com/proxy/A-rTdMyYcwElvN_jyBLrjrgi33iyTV9SUkf7tjsRAodGvbJ869POstfNWyQuy1929TRoiKtZ2HM-QF4LTdz-Lxa81pYlYqI',
+    'logo_url' => 'http://www.sbrc2016.ufba.br/assets/img/dcc-ufba.png',
 
     'ROUTES' => [
         'home' => '/',
-        'teachers' => '/professores'
+        'teachers' => '/professores',
+        'courses' => '/cursos',
     ],
 
     'isActive' => function ($page, $path) {
@@ -39,6 +40,10 @@ return [
         'professores' => [
             'path' => '{collection}/{-name}',
             'sort' => 'name',
-        ]
+        ],
+        'cursos' => [
+            'path' => '{collection}/{-title}',
+            'sort' => 'title',
+        ],
     ],
 ];

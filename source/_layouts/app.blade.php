@@ -35,7 +35,7 @@
     <!-- navbar-->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a href="index.html" class="navbar-brand">
+            <a href="{{ $page->baseUrl . $page->ROUTES['home'] }}" class="navbar-brand">
                 <img class="logo" src="{{ $page->logo_url }}" alt="{{ $page->title }}" />
             </a>
             <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right mt-0"><span></span><span></span><span></span></button>
@@ -44,6 +44,11 @@
                     <div class="nav-item">
                         <a href="{{ $page->baseUrl . $page->ROUTES['home'] }}" class="nav-link {{ $page->isActive($page->baseUrl . $page->ROUTES['home']) }}">
                             Home <span class="sr-only">(current)</span>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="{{ $page->baseUrl . $page->ROUTES['courses'] }}" class="nav-link {{ $page->isActive($page->baseUrl . $page->ROUTES['courses']) }}">
+                            Cursos <span class="sr-only">(current)</span>
                         </a>
                     </div>
                     <div class="nav-item">

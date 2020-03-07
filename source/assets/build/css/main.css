@@ -11547,16 +11547,16 @@ button {
   margin-bottom: 2rem;
 }
 
-blockquote.blockquote {
+blockquote.blockquote, .markdown blockquote {
   background: #fafafa;
   padding: 30px;
 }
-blockquote.blockquote p {
+blockquote.blockquote p, .markdown blockquote p {
   font-size: 1rem;
   font-size: #555;
   line-height: 1.7rem;
 }
-blockquote.blockquote .author {
+blockquote.blockquote .author, .markdown blockquote .author, .markdown blockquote p:last-child:not(:first-child) {
   font-size: 1.1rem;
   margin-top: 20px;
   font-weight: 700;
@@ -11567,7 +11567,7 @@ blockquote.blockquote .author {
   color: #333 !important;
 }
 
-ul.checked li::before {
+ul.checked li::before, .markdown ul li::before {
   content: "\F00C";
   width: 15px;
   height: 15px;
@@ -12159,12 +12159,12 @@ nav.navbar .dropdown .dropdown-menu.active {
   max-width: 90px;
   margin: 20px 0;
 }
-.intro .author strong {
+.intro .author strong, .intro .markdown blockquote p:last-child:not(:first-child) strong, .markdown blockquote .intro p:last-child:not(:first-child) strong {
   display: block;
   text-transform: uppercase;
   line-height: 1;
 }
-.intro .author span {
+.intro .author span, .intro .markdown blockquote p:last-child:not(:first-child) span, .markdown blockquote .intro p:last-child:not(:first-child) span {
   text-transform: uppercase;
   color: #777;
   font-size: 0.8rem;
@@ -12367,7 +12367,7 @@ nav.navbar .dropdown .dropdown-menu.active {
   transform: translateY(20px);
   transition: all 0.4s;
 }
-.blog-post .author {
+.blog-post .author, .blog-post .markdown blockquote p:last-child:not(:first-child), .markdown blockquote .blog-post p:last-child:not(:first-child) {
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -12859,7 +12859,7 @@ ul.social-buttons .right strong {
   margin-right: 20px;
   overflow: hidden;
 }
-.blogpost-full .author, .blogpost-full .date, .blogpost-full .comments {
+.blogpost-full .author, .blogpost-full .markdown blockquote p:last-child:not(:first-child), .markdown blockquote .blogpost-full p:last-child:not(:first-child), .blogpost-full .date, .blogpost-full .comments {
   font-weight: 700;
   font-size: 0.9rem;
   margin-right: 20px;
@@ -14168,7 +14168,7 @@ mark,
   background-color: #fcf8e3;
 }
 
-.blockquote {
+.blockquote, .markdown blockquote {
   padding: 0.5rem 1rem;
   margin-bottom: 2rem;
   font-size: 1.25rem;
@@ -14924,4 +14924,30 @@ div.logo > img {
 .navbar.navbar {
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.markdown img {
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6, .markdown h7 {
+  margin-top: 3rem;
+}
+.markdown ul {
+  margin-bottom: 1.5rem;
+  padding-left: 0;
+  list-style: none;
+}
+.markdown blockquote {
+  margin-bottom: 3rem;
+  margin-top: 1.5rem;
+}
+.markdown blockquote p {
+  margin-bottom: 0;
+}
+.course-details .course-information {
+  width: 100%;
 }

@@ -29,3 +29,38 @@ div.logo {
   padding-bottom: 10px;
 }
 
+.markdown {
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  h1, h2, h3, h4, h5, h6, h7 {
+    margin-top: 3rem;
+  }
+
+  ul {
+    @extend .checked;
+    margin-bottom: 1.5rem;
+    padding-left: 0;
+    list-style: none;
+  }
+  blockquote {
+    @extend .blockquote;
+    margin-bottom: 3rem;
+    margin-top: 1.5rem;
+    p {
+      margin-bottom: 0;
+      &:last-child:not(:first-child) {
+        @extend .author;
+      }
+    }
+  }
+}
+
+.course-details .course-information {
+  width: 100%;
+}
