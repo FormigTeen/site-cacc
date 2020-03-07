@@ -18,6 +18,18 @@
         "node-cmd": "^3.0.0",
         "sass": "^1.15.2",
         "sass-loader": "^7.1.0",
+        "vue-template-compiler": "^2.6.11",
         "yargs": "^4.6.0"
+    },
+    "dependencies": {
+        "bootstrap": "^4.4.1",
+        "bootstrap-select": "^1.13.12",
+        "html5shiv": "^3.7.3",
+        "jquery": "^3.4.1",
+        "jquery.cookie": "^1.4.1",
+        "lity": "^2.4.0",
+        "popper.js": "^1.16.1",
+        "respond.js": "^1.4.2",
+        "swiper": "^5.3.6"
     }
 }

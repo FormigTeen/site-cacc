@@ -1,0 +1,31 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+@import "theme/font-education";
+
+@import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+
+
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~swiper/css/swiper.css";
+@import "~lity/dist/lity.css";
+@import "~bootstrap-select/dist/css/bootstrap-select.css";
+
+@import "theme/style.default";
+
+.navbar-brand {
+  .logo {
+    max-height: 75px;
+  }
+}
+
+div.logo {
+  > img {
+    max-height: 250px;
+  }
+}
+
+.navbar.navbar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+

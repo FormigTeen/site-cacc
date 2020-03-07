@@ -15,4 +15,7 @@ mix.js('source/_assets/js/main.js', 'js')
     .sass('source/_assets/sass/main.scss', 'css')
     .options({
         processCssUrls: false,
-    }).version();
+    })
+    .extract(['bootstrap', 'popper.js', 'jquery', 'html5shiv'])
+    .sourceMaps()
+    .version();
