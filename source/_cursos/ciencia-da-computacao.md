@@ -1,6 +1,7 @@
 ---
 extends: _layouts.course
 section: content
+is_published: true
 
 title: Ciência da Computação
 description: Esse curso é sobre Matemática e Computação, entende?

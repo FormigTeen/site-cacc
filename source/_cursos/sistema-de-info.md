@@ -1,6 +1,7 @@
 ---
 extends: _layouts.course
 section: content
+is_published: true
 
 title: Sistema de Informação
 description: Esse curso é sobre Matemática e Computação, entende?

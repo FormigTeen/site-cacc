@@ -269,101 +269,33 @@
         </header>
         <div class="swiper-container events-slider pb-5">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="event row align-items-center align-items-stretch">
-                        <div class="col-lg-6 pr-lg-0">
-                            <div class="image"><img src="img/events-img-2.jpeg" alt="Most part fantastic faculty members for the most students">
-                                <div class="overlay d-flex align-items-end">
-                                    <div class="date"><strong>27</strong><span>July 2018</span></div>
+
+                @foreach($events as $event)
+                    <div class="swiper-slide">
+                        <div class="event row align-items-center align-items-stretch">
+                            <div class="col-lg-6 pr-lg-0">
+                                <div class="image"><img src="{{ $event->banner_url }}" alt="{{ $event->title }}">
+                                    <div class="overlay d-flex align-items-end">
+                                        <div class="date">
+                                            <strong>{{ $page->dateToCarbon($event->date)->day }}</strong>
+                                            <span>{{ $page->dateToCarbon($event->date)->format('F Y') }}</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6 pl-lg-0">
-                            <div class="text bg-gray d-flex align-items-center">
-                                <div class="text-inner">
-                                    <h4>Most part fantastic faculty members for the most students</h4>
-                                    <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi.</p><a href="#" class="btn btn-outline-primary">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="event row align-items-center align-items-stretch">
-                        <div class="col-lg-6 pr-lg-0">
-                            <div class="image"><img src="img/events-img-3.jpeg" alt="Most part fantastic faculty members for the most students">
-                                <div class="overlay d-flex align-items-end">
-                                    <div class="date"><strong>27</strong><span>August 2018</span></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 pl-lg-0">
-                            <div class="text bg-gray d-flex align-items-center">
-                                <div class="text-inner">
-                                    <h4>Most part fantastic faculty members for the most students</h4>
-                                    <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi.</p><a href="#" class="btn btn-outline-primary">Read more</a>
+                            <div class="col-lg-6 pl-lg-0">
+                                <div class="text bg-gray d-flex align-items-center">
+                                    <div class="text-inner">
+                                        <h4>{{ $event->title }}</h4>
+                                        <p>{{ $event->description }}
+                                        </p><a href="{{ $event->link }}" target="_blank" class="btn btn-outline-primary">Saiba mais!</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="event row align-items-center align-items-stretch">
-                        <div class="col-lg-6 pr-lg-0">
-                            <div class="image"><img src="img/events-img-1.jpeg" alt="Most part fantastic faculty members for the most students">
-                                <div class="overlay d-flex align-items-end">
-                                    <div class="date"><strong>27</strong><span>June 2018</span></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 pl-lg-0">
-                            <div class="text bg-gray d-flex align-items-center">
-                                <div class="text-inner">
-                                    <h4>Most part fantastic faculty members for the most students</h4>
-                                    <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi.</p><a href="#" class="btn btn-outline-primary">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="event row align-items-center align-items-stretch">
-                        <div class="col-lg-6 pr-lg-0">
-                            <div class="image"><img src="img/events-img-2.jpeg" alt="Most part fantastic faculty members for the most students">
-                                <div class="overlay d-flex align-items-end">
-                                    <div class="date"><strong>27</strong><span>July 2018</span></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 pl-lg-0">
-                            <div class="text bg-gray d-flex align-items-center">
-                                <div class="text-inner">
-                                    <h4>Most part fantastic faculty members for the most students</h4>
-                                    <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi.</p><a href="#" class="btn btn-outline-primary">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="event row align-items-center align-items-stretch">
-                        <div class="col-lg-6 pr-lg-0">
-                            <div class="image"><img src="img/events-img-3.jpeg" alt="Most part fantastic faculty members for the most students">
-                                <div class="overlay d-flex align-items-end">
-                                    <div class="date"><strong>27</strong><span>August 2018</span></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 pl-lg-0">
-                            <div class="text bg-gray d-flex align-items-center">
-                                <div class="text-inner">
-                                    <h4>Most part fantastic faculty members for the most students</h4>
-                                    <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi.</p><a href="#" class="btn btn-outline-primary">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+
             </div>
             <!-- Add Pagination-->
             <div class="swiper-pagination mt-5"></div>
@@ -382,54 +314,28 @@
             </div>
         </header>
         <div class="row">
-            <div class="col-lg-4">
+            @foreach($posts->take(3) as $post)
+                <div class="col-lg-4">
                 <div class="blog-post">
-                    <div class="image"><img src="img/blog-img.jpg" alt="Projects aim to help those experiencing mental">
-                        <div class="overlay d-flex align-items-center justify-content-center"><a href="blog-post.html" class="btn btn-outline-light">Read more</a></div>
-                    </div>
-                    <div class="author"><img src="img/avatar.jpg" alt="author" class="img-fluid"></div>
-                    <div class="text"><a href="blog-post.html">
-                            <h4 class="text-this">Projects aim to help those experiencing mental</h4></a>
+                    @if($post->banner_url)
+                        <div class="image">
+                            <img src="{{ $post->banner_url }}" alt="{{ $post->title }}">
+                            <div class="overlay d-flex align-items-center justify-content-center"><a href="blog-post.html" class="btn btn-outline-light">Read more</a></div>
+                        </div>
+                    @endif
+                    <div class="author"><img src="{{ $post->author_image_url }}" alt="{{ $post->author_name }}" class="img-fluid"></div>
+                    <div class="text">
+                        <a href="{{ $post->getUrl() }}">
+                            <h4 class="text-this">{{ $post->title }}</h4>
+                        </a>
                         <ul class="post-meta list-inline">
-                            <li class="list-inline-item"><i class="icon-clock-1"></i> 14 August 2017</li>
-                            <li class="list-inline-item"><i class="icon-chat"></i>340</li>
+                            <li class="list-inline-item"><i class="icon-clock-1"></i> {{ $page->dateToStr($post->date) }}</li>
                         </ul>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+                        <p>{{ $post->description }}</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
-                <div class="blog-post">
-                    <div class="image"><img src="img/blog-img-2.jpeg" alt="Projects aim to help those experiencing mental">
-                        <div class="overlay d-flex align-items-center justify-content-center"><a href="blog-post.html" class="btn btn-outline-light">Read more</a></div>
-                    </div>
-                    <div class="author"><img src="img/avatar-2.jpg" alt="author" class="img-fluid"></div>
-                    <div class="text"><a href="blog-post.html">
-                            <h4 class="text-this">Projects aim to help those experiencing mental</h4></a>
-                        <ul class="post-meta list-inline">
-                            <li class="list-inline-item"><i class="icon-clock-1"></i> 14 August 2017</li>
-                            <li class="list-inline-item"><i class="icon-chat"></i>340</li>
-                        </ul>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="blog-post">
-                    <div class="image"><img src="img/blog-img-3.jpeg" alt="Projects aim to help those experiencing mental">
-                        <div class="overlay d-flex align-items-center justify-content-center"><a href="blog-post.html" class="btn btn-outline-light">Read more</a></div>
-                    </div>
-                    <div class="author"><img src="img/avatar-3.jpg" alt="author" class="img-fluid"></div>
-                    <div class="text"><a href="blog-post.html">
-                            <h4 class="text-this">Projects aim to help those experiencing mental</h4></a>
-                        <ul class="post-meta list-inline">
-                            <li class="list-inline-item"><i class="icon-clock-1"></i> 14 August 2017</li>
-                            <li class="list-inline-item"><i class="icon-chat"></i>340</li>
-                        </ul>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>

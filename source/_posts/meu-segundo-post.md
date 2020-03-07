@@ -3,9 +3,9 @@ extends: _layouts.post
 section: content
 is_published: true
 
-date: 12/12/2019
+date: 12/12/2021
 
-title: Meu primeiro Post
+title: Meu segundo Post
 description: Esse curso é sobre Matemática e Computação, entende?
 banner_url: https://www.yu.edu/sites/default/files/ThinkstockPhotos-853673106.jpg
 category: Aleatório

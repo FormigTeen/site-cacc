@@ -41,18 +41,37 @@ return [
         return Carbon\Carbon::createFromFormat('d/m/Y', $date)->format('d \d\e F \d\e Y');
     },
 
+    'dateToCarbon' => function ($page, $date) {
+        return Carbon\Carbon::createFromFormat('d/m/Y', $date);
+    },
+
     'collections' => [
         'professores' => [
             'path' => '{collection}/{-name}',
             'sort' => 'name',
+            'filter' => function ($item) {
+                return $item->is_published ?? false;
+            }
         ],
         'cursos' => [
             'path' => '{collection}/{-title}',
             'sort' => 'title',
+            'filter' => function ($item) {
+                return $item->is_published ?? false;
+            }
         ],
         'posts' => [
             'path' => 'blog/post/{-title}',
+            'sort' => '-date',
+            'filter' => function ($item) {
+                return ( ( $item->is_published ?? false ) && \Carbon\Carbon::now() >= Carbon\Carbon::createFromFormat('d/m/Y', $item->date) );
+            }
+        ],
+        'events' => [
             'sort' => 'date',
+            'filter' => function ($item) {
+                return ( ( $item->is_published ?? false ) && \Carbon\Carbon::now() <= Carbon\Carbon::createFromFormat('d/m/Y', $item->date) );
+            }
         ],
     ],
 ];

@@ -23,7 +23,7 @@ class AddCategoryPages extends PseudoCollectionGenerator
     {
         return collect([
             'posts_by_category' => [
-                'extends' => '_layouts.blog',
+                'extends' => '_cursos',
                 'path' => 'blog/posts/{category}',
                 'items' => $this->getCategoryItems(),
             ],
