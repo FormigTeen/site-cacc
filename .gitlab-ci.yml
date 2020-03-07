@@ -1,7 +1,7 @@
 image: composer
 
 before_script:
-  - apt install nodejs node npm
+  - dnf install nodejs node npm
   - npm install
   - composer install
 
