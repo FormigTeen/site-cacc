@@ -1,12 +1,9 @@
-image: corycollier/npm-php
+image: composer
 
 before_script:
-  - curl -sS https://getcomposer.org/installer | php
-  - curl -sL https://deb.nodesource.com/setup_6.x | bash -
-  - apt-get update -yqq
-  - apt-get install zlib1g-dev git nodejs npm -yqq
-  - php composer.phar install
-  - npm install -g gulp && npm install
+  - apt install nodejs node npm
+  - npm install
+  - composer install
 
 cache:
   paths:
