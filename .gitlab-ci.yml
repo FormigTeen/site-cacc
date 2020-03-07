@@ -1,10 +1,10 @@
-image: php:7.4
+image: corycollier/npm-php
 
 before_script:
   - curl -sS https://getcomposer.org/installer | php
   - curl -sL https://deb.nodesource.com/setup_6.x | bash -
   - apt-get update -yqq
-  - apt-get install zlib1g-dev git nodejs -yqq
+  - apt-get install zlib1g-dev git nodejs npm -yqq
   - php composer.phar install
   - npm install -g gulp && npm install
 
