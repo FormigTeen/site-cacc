@@ -1,5 +1,5 @@
 <!-- Hero Section-->
-<section class="hero hero-home d-none d-block">
+<section class="hero hero-home">
     <div class="swiper-container hero-slider">
         <div class="swiper-wrapper">
             @foreach($page->cover as $cover)
