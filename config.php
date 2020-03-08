@@ -7,6 +7,7 @@ return [
         'title' => 'Departamento de Computação da UFBA',
         'description' => 'Website description.',
     ],
+    'bot_url' => 'https://t.me/ufba_bot',
     'address' => 'Av. Adhemar de Barros, s/nº - Ondina, Salvador - BA, 40170-110 | Instituto de Matemática - Sala 106',
     'email' => 'dcc@ufba.br',
     'phone' => '+55 71 3283-6264',

@@ -332,7 +332,7 @@
         <div class="row">
             <p class="col-lg-8">Você sabia que o Departamento de Computação tem um Bot no Instagram e com ele você pode interagar com esse Site? Em breve teremos mais informações, aguarde!</p>
         </div>
-        <div class="CTAs"><a href="#" disabled class="btn btn-primary disabled">Conversar com o Bot</a></div>
+        <div class="CTAs"><a href="{{ $site->bot_url }}" target="_blank" class="btn btn-primary"><i class="fa fa-telegram"></i> Conversar com o Bot</a></div>
     </div>
 </section>
 
