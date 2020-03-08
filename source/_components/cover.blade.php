@@ -28,25 +28,25 @@
 <section class="info-boxes">
     <div class="container">
         <div class="row">
-            <a href="#" style="background: url(img/boxes-img-1.jpeg);" class="info-box red col-lg-3">
+            <a href="#"class="info-box red col-lg-3">
                 <div class="info-box-content">
                     <h3 class="text-uppercase">Programs</h3>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
             </a>
-            <a href="#" style="background: url(img/boxes-img-2.jpg);" class="info-box cyan col-lg-3">
+            <a href="#" class="info-box cyan col-lg-3">
                 <div class="info-box-content">
                     <h3 class="text-uppercase">Affordability</h3>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
             </a>
-            <a href="#" style="background: url(img/boxes-img-3.jpeg);" class="info-box yellow col-lg-3">
+            <a href="#"  class="info-box yellow col-lg-3">
                 <div class="info-box-content">
                     <h3 class="text-uppercase">Certification</h3>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
             </a>
-            <a href="#" style="background: url(img/boxes-img-3.jpeg);" class="info-box green col-lg-3">
+            <a href="#" class="info-box green col-lg-3">
                 <div class="info-box-content">
                     <h3 class="text-uppercase">Certification</h3>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
