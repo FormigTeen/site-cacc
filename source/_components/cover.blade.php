@@ -4,7 +4,7 @@
         <div class="swiper-wrapper">
             @foreach($page->cover as $cover)
                 <div class="swiper-slide">
-                    <div style="background: url({{ $cover['image_url'] }});" class="hero-content has-overlay-dark">
+                    <div style="height: 100vh; background: url({{ $cover['image_url'] }}); background-size: contain; background-repeat: no-repeat" class="hero-content has-overlay-dark">
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-8">
