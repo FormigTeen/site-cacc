@@ -21,12 +21,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 d-none d-md-block">
-                    <p class="mb-0"> <i class="fa fa-map-marker-alt"></i>{{ $page->address }}</p>
+                    <p class="mb-0"><i class="fa fa-map-marker"></i>{{ $page->address }}</p>
                 </div>
                 <div class="col text-right">
                     <ul class="list-inline mb-0">
-                        <li class="list-inline-item"><a href="mailto:{{ $page->email }}"><i class="fa fa-envelope-alt"></i>{{ $page->email }}</a></li>
-                        <li class="list-inline-item"><a href="#"><i class="fa fa-phone-alt"></i>{{ $page->phone }}</a></li>
+                        <li class="list-inline-item"><a href="mailto:{{ $page->email }}"><i class="fa fa-envelope"></i>{{ $page->email }}</a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-phone"></i>{{ $page->phone }}</a></li>
                     </ul>
                 </div>
             </div>
@@ -115,9 +115,9 @@
             </div>
         </div>
     </nav>
-    <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark mx-0 px-0 bg-success ">
+    <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark mx-0 px-0 bg-primary">
         <a class="btn btn-primary btn-block btn-lg font-500 br-0" target="blank" href="{{ $page->bot_url }}">
-            <i class="fab fa-telegram m-r-10"></i>FALE CONOSCO
+            <i class="fa fa-telegram m-r-10"></i> FALE CONOSCO
         </a>
 
     </nav>
