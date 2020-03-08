@@ -55,7 +55,7 @@
                                 <a href="{{ $course->getUrl() }}" class="watch-btn"><i class="fa fa-eye"></i>Veja Mais</a>
                             </div>
                         </div>
-                        <div class="course-header pb-1"><a href="course-detail.html" class="no-anchor-style">
+                        <div class="course-header pb-1"><a href="{{ $course->getUrl() }}" class="no-anchor-style">
                             <h3 class="h5">{{ $course->title }}</h3></a>
                             <div class="d-flex align-items-center justify-content-between">
                                 <div class="category"><i class="fa fa-tags"></i><a href="#">{{ $course->category }}</a></div>
