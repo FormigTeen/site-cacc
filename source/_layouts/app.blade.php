@@ -17,13 +17,13 @@
 <!-- header-->
 <header class="header">
     <!-- top bar-->
-    <div class="top-bar d-none d-md-block">
+    <div class="top-bar">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-8 d-none d-md-block">
                     <p class="mb-0"> <i class="icon-placeholder"></i>{{ $page->address }}</p>
                 </div>
-                <div class="col-md-6 text-right">
+                <div class="col text-right">
                     <ul class="list-inline mb-0">
                         <li class="list-inline-item"><a href="mailto:{{ $page->email }}"><i class="icon-envelope"></i>{{ $page->email }}</a></li>
                         <li class="list-inline-item"><a href="#"><i class="icon-telephone"></i>{{ $page->phone }}</a></li>
