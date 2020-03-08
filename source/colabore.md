@@ -35,5 +35,7 @@ Simples, não?
 
 ### Estrutura do Projeto ###
 
+Todo o conteúdo do Site está estruturado em Markdown, YAML e HTML.
+
 *Em Breve...*
 
