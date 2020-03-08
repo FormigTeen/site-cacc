@@ -66,6 +66,11 @@
                             Blog <span class="sr-only">(current)</span>
                         </a>
                     </div>
+                    <div class="nav-item">
+                        <a href="{{ $page->baseUrl . $page->ROUTES['colabore'] }}" class="nav-link {{ $page->isActive($page->baseUrl . $page->ROUTES['colabore']) }}">
+                            Colabore <span class="sr-only">(current)</span>
+                        </a>
+                    </div>
                     <!-- multi-level dropdown-->
 {{--                    <div class="nav-item dropdown"><a id="navbarDropdownMenuLink" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">Dropdown <i class="fa fa-angle-down"></i></a>--}}
 {{--                        <ul aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">--}}
@@ -142,6 +147,7 @@
 
 @section('root')
 @show
+@if(!($page->show_news == "false"))
 <!-- News Section-->
 <section class="latest-news">
     <div class="container">
@@ -156,92 +162,57 @@
         <div id="pills-tabContent" class="tab-content">
             <div id="pills-students" role="tabpanel" aria-labelledby="students-tab" class="tab-pane fade show active">
                 <div class="row">
-                    <div class="col-lg-4">
-                        <div class="news-block">
-                            <div class="news-block-inner bg-gray"><small class="text-transform">February 24, 2017</small>
-                                <h4>Globalization and Human Rights class</h4>
-                                <p> Lommodo ligula eget dolor. Aenean massa. Cum sociis que</p><a href="#" class="btn btn-outline-primary">Read more</a>
-                            </div>
-                        </div>
 
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="news-block">
-                            <div style="background: url(img/news-bg.jpg);" class="news-block-inner bg-image"><small class="text-transform">February 24, 2017</small>
-                                <h4>Globalization and Human Rights class</h4>
-                                <p> Lommodo ligula eget dolor. Aenean massa. Cum sociis que</p><a href="#" class="btn btn-outline-light">Read more</a>
+                    @foreach($noticias->where('scope', 0)->take(3) as $news)
+                        <div class="col-lg-4">
+                            <div class="news-block">
+                                <div class="news-block-inner bg-gray">
+                                    <small class="text-transform">{{ $page->dateToCarbon($news->date)->format('F d, Y') }}</small>
+                                    <h4>{{ $news->title }}</h4>
+                                    <p> {{ $news->description }}</p><a href="{{ $news->getUrl() }}" class="btn btn-outline-primary">Leia mais</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="news-block">
-                            <div class="news-block-inner bg-gray"><small class="text-transform">February 24, 2017</small>
-                                <h4>Globalization and Human Rights class</h4>
-                                <p> Lommodo ligula eget dolor. Aenean massa. Cum sociis que</p><a href="#" class="btn btn-outline-primary">Read more</a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
+
                 </div>
             </div>
             <div id="pills-teachers" role="tabpanel" aria-labelledby="teachers-tab" class="tab-pane fade">
                 <div class="row">
-                    <div class="col-lg-4">
-                        <div class="news-block">
-                            <div style="background: url(img/news-bg.jpg);" class="news-block-inner bg-image"><small class="text-transform">February 24, 2017</small>
-                                <h4>Globalization and Human Rights class</h4>
-                                <p> Lommodo ligula eget dolor. Aenean massa. Cum sociis que</p><a href="#" class="btn btn-outline-light">Read more</a>
+                    @foreach($noticias->where('scope', 1)->take(3) as $news)
+                        <div class="col-lg-4">
+                            <div class="news-block">
+                                <div class="news-block-inner bg-gray">
+                                    <small class="text-transform">{{ $page->dateToCarbon($news->date)->format('F d, Y') }}</small>
+                                    <h4>{{ $news->title }}</h4>
+                                    <p> {{ $news->description }}</p><a href="{{ $news->getUrl() }}" class="btn btn-outline-primary">Leia mais</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="news-block">
-                            <div class="news-block-inner bg-gray"><small class="text-transform">February 24, 2017</small>
-                                <h4>Globalization and Human Rights class</h4>
-                                <p> Lommodo ligula eget dolor. Aenean massa. Cum sociis que</p><a href="#" class="btn btn-outline-primary">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="news-block">
-                            <div class="news-block-inner bg-gray"><small class="text-transform">February 24, 2017</small>
-                                <h4>Globalization and Human Rights class</h4>
-                                <p> Lommodo ligula eget dolor. Aenean massa. Cum sociis que</p><a href="#" class="btn btn-outline-primary">Read more</a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
             <div id="pills-prospects" role="tabpanel" aria-labelledby="prospects-tab" class="tab-pane fade">
                 <div class="row">
-                    <div class="col-lg-4">
-                        <div class="news-block">
-                            <div class="news-block-inner bg-gray"><small class="text-transform">February 24, 2017</small>
-                                <h4>Globalization and Human Rights class</h4>
-                                <p> Lommodo ligula eget dolor. Aenean massa. Cum sociis que</p><a href="#" class="btn btn-outline-primary">Read more</a>
+                    @foreach($noticias->where('scope', 1)->take(3) as $news)
+                        <div class="col-lg-4">
+                            <div class="news-block">
+                                <div class="news-block-inner bg-gray">
+                                    <small class="text-transform">{{ $page->dateToCarbon($news->date)->format('F d, Y') }}</small>
+                                    <h4>{{ $news->title }}</h4>
+                                    <p> {{ $news->description }}</p><a href="{{ $news->getUrl() }}" class="btn btn-outline-primary">Leia mais</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="news-block">
-                            <div class="news-block-inner bg-gray"><small class="text-transform">February 24, 2017</small>
-                                <h4>Globalization and Human Rights class</h4>
-                                <p> Lommodo ligula eget dolor. Aenean massa. Cum sociis que</p><a href="#" class="btn btn-outline-primary">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="news-block">
-                            <div style="background: url(img/news-bg.jpg);" class="news-block-inner bg-image"><small class="text-transform">February 24, 2017</small>
-                                <h4>Globalization and Human Rights class</h4>
-                                <p> Lommodo ligula eget dolor. Aenean massa. Cum sociis que</p><a href="#" class="btn btn-outline-light">Read more</a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
     </div>
 </section>
+@endif
+
+@if(!($page->show_statics == "false"))
 <!-- Statistics Section-->
 <section class="statistics pt-0 pb-0 bg-primary has-pattern">
     <div class="container text-center">
@@ -261,6 +232,9 @@
         </div>
     </div>
 </section>
+@endif
+
+@if(!($page->show_events == "false"))
 <!-- Events Section-->
 <section class="events">
     <div class="container">
@@ -308,6 +282,9 @@
         </div>
     </div>
 </section>
+@endif
+
+@if(!($page->show_blog == "false"))
 <!-- Blog Section-->
 <section class="blog bg-gray">
     <div class="container">
@@ -326,7 +303,7 @@
                     @if($post->banner_url)
                         <div class="image cover">
                             <img src="{{ $post->banner_url }}" alt="{{ $post->title }}">
-                            <div class="overlay d-flex align-items-center justify-content-center"><a href="blog-post.html" class="btn btn-outline-light">Read more</a></div>
+                            <div class="overlay d-flex align-items-center justify-content-center"><a href="{{ $post->getUrl() }}" class="btn btn-outline-light">Leia mais</a></div>
                         </div>
                     @endif
                     <div class="author cover"><img src="{{ $post->author_image_url }}" alt="{{ $post->author_name }}" class="img-fluid"></div>
@@ -345,6 +322,9 @@
         </div>
     </div>
 </section>
+@endif
+
+
 <!-- Divider Section-->
 <section style="background: url(img/divider-bg.jpg) fixed;" class="divider has-overlay-darker">
     <div class="container">
@@ -355,6 +335,8 @@
         <div class="CTAs"><a href="#" disabled class="btn btn-primary disabled">Conversar com o Bot</a></div>
     </div>
 </section>
+
+@if(!($page->show_feedbacks == "false"))
 <!-- Testimonials Section-->
 <section class="testimonials">
     <div class="container text-center">
@@ -386,6 +368,8 @@
         </div>
     </div>
 </section>
+@endif
+
 <!-- footer-->
 <footer class="footer pb-0">
     <div class="container">

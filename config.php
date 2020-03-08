@@ -32,6 +32,7 @@ return [
         'courses' => '/cursos',
         'blog' => '/blog',
         'news' => '/noticias',
+        'colabore' => '/colabore',
     ],
 
     'isActive' => function ($page, $path) {

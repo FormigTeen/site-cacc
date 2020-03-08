@@ -3,6 +3,8 @@ extends: _layouts.news
 section: content
 is_published: true
 
+scope: 0
+
 date: 12/04/2019
 title: Meu segundo Post
 description: Esse curso é sobre Matemática e Computação, entende?
