@@ -57,6 +57,11 @@
                         </a>
                     </div>
                     <div class="nav-item">
+                        <a href="{{ $page->baseUrl . $page->ROUTES['news'] }}" class="nav-link {{ $page->isActive($page->baseUrl . $page->ROUTES['news']) }}">
+                            Notícias <span class="sr-only">(current)</span>
+                        </a>
+                    </div>
+                    <div class="nav-item">
                         <a href="{{ $page->baseUrl . $page->ROUTES['blog'] }}" class="nav-link {{ $page->isActive($page->baseUrl . $page->ROUTES['blog']) }}">
                             Blog <span class="sr-only">(current)</span>
                         </a>
@@ -158,6 +163,7 @@
                                 <p> Lommodo ligula eget dolor. Aenean massa. Cum sociis que</p><a href="#" class="btn btn-outline-primary">Read more</a>
                             </div>
                         </div>
+
                     </div>
                     <div class="col-lg-4">
                         <div class="news-block">
@@ -270,11 +276,11 @@
         <div class="swiper-container events-slider pb-5">
             <div class="swiper-wrapper">
 
-                @foreach($events as $event)
+                @foreach($eventos as $event)
                     <div class="swiper-slide">
                         <div class="event row align-items-center align-items-stretch">
                             <div class="col-lg-6 pr-lg-0">
-                                <div class="image"><img src="{{ $event->banner_url }}" alt="{{ $event->title }}">
+                                <div class="image cover"><img src="{{ $event->banner_url }}" alt="{{ $event->title }}">
                                     <div class="overlay d-flex align-items-end">
                                         <div class="date">
                                             <strong>{{ $page->dateToCarbon($event->date)->day }}</strong>
@@ -318,12 +324,12 @@
                 <div class="col-lg-4">
                 <div class="blog-post">
                     @if($post->banner_url)
-                        <div class="image">
+                        <div class="image cover">
                             <img src="{{ $post->banner_url }}" alt="{{ $post->title }}">
                             <div class="overlay d-flex align-items-center justify-content-center"><a href="blog-post.html" class="btn btn-outline-light">Read more</a></div>
                         </div>
                     @endif
-                    <div class="author"><img src="{{ $post->author_image_url }}" alt="{{ $post->author_name }}" class="img-fluid"></div>
+                    <div class="author cover"><img src="{{ $post->author_image_url }}" alt="{{ $post->author_name }}" class="img-fluid"></div>
                     <div class="text">
                         <a href="{{ $post->getUrl() }}">
                             <h4 class="text-this">{{ $post->title }}</h4>
@@ -357,72 +363,23 @@
         </header>
         <div class="swiper-container testimonials-slider">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="testimonial">
-                        <div class="row">
-                            <p class="feedback col-lg-8 mx-auto">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
-                        </div>
-                        <div class="user d-flex align-items-center justify-content-center">
-                            <div class="avatar"><img src="img/avatar.jpg" alt="Marco Antonio" class="img-fluid"></div>
-                            <div class="title"><strong class="text-uppercase">Marco Antonio</strong><span>Gravida ultrices</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="testimonial">
-                        <div class="row">
-                            <p class="feedback col-lg-8 mx-auto">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
-                        </div>
-                        <div class="user d-flex align-items-center justify-content-center">
-                            <div class="avatar"><img src="img/avatar-2.jpg" alt="Marissa Spencer" class="img-fluid"></div>
-                            <div class="title"><strong class="text-uppercase">Marissa Spencer</strong><span>Curabitur commodo</span></div>
+
+                @foreach($feedbacks->shuffle()->take(10) as $feedback)
+                    <div class="swiper-slide">
+                        <div class="testimonial">
+                            <div class="row">
+                                <p class="feedback col-lg-8 mx-auto">{{ $feedback->text }}</p>
+                            </div>
+                            <div class="user d-flex align-items-center justify-content-center">
+                                <div class="avatar cover">
+                                    <img src="{{ $feedback->author_image_url }}" alt="{{ $feedback->author_name }}" class="img-fluid">
+                                </div>
+                                <div class="title">
+                                    <strong class="text-uppercase">{{ $feedback->author_name }}</strong><span>{{ $feedback->author_description }}</span></div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="testimonial">
-                        <div class="row">
-                            <p class="feedback col-lg-8 mx-auto">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
-                        </div>
-                        <div class="user d-flex align-items-center justify-content-center">
-                            <div class="avatar"><img src="img/avatar-4.jpg" alt="Kate White" class="img-fluid"></div>
-                            <div class="title"><strong class="text-uppercase">Kate White</strong><span>Gravida ultrices</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="testimonial">
-                        <div class="row">
-                            <p class="feedback col-lg-8 mx-auto">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
-                        </div>
-                        <div class="user d-flex align-items-center justify-content-center">
-                            <div class="avatar"><img src="img/avatar-3.jpg" alt="Marco Antonio" class="img-fluid"></div>
-                            <div class="title"><strong class="text-uppercase">Marco Antonio</strong><span>Gravida ultrices</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="testimonial">
-                        <div class="row">
-                            <p class="feedback col-lg-8 mx-auto">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
-                        </div>
-                        <div class="user d-flex align-items-center justify-content-center">
-                            <div class="avatar"><img src="img/avatar-2.jpg" alt="Marissa Spencer" class="img-fluid"></div>
-                            <div class="title"><strong class="text-uppercase">Marissa Spencer</strong><span>Curabitur commodo</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="testimonial">
-                        <div class="row">
-                            <p class="feedback col-lg-8 mx-auto">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
-                        </div>
-                        <div class="user d-flex align-items-center justify-content-center">
-                            <div class="avatar"><img src="img/avatar-4.jpg" alt="Kate White" class="img-fluid"></div>
-                            <div class="title"><strong class="text-uppercase">Kate White</strong><span>Gravida ultrices</span></div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
             <!-- Add Pagination-->
             <div class="swiper-pagination"></div>

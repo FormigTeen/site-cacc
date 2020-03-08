@@ -14951,3 +14951,18 @@ div.logo > img {
 .course-details .course-information {
   width: 100%;
 }
+
+.cover img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+div.cover-circle {
+  width: 400px;
+  height: 400px;
+}
+div.cover-circle img {
+  border-radius: 50%;
+}

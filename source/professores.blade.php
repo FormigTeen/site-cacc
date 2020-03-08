@@ -8,6 +8,7 @@ title: Professores
     <section class="staff bg-gray">
         <div class="container">
             <div class="row">
+
                 <div class="col-lg-12 mb-5">
                     <nav aria-label="breadcrumb" role="navigation">
                         <ol class="breadcrumb">
@@ -20,6 +21,7 @@ title: Professores
                         <p class="col-lg-8">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos.</p>
                     </div>
                 </div>
+
                 @foreach($professores as $teacher)
                     <div class="col-lg-4">
                         <div class="staff-member">

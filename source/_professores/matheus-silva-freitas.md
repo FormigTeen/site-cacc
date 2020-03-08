@@ -1,6 +1,7 @@
 ---
 extends: _layouts.teacher
 section: content
+is_published: true
 
 
 name: Matheus Silva Freitas

@@ -31,6 +31,7 @@ return [
         'teachers' => '/professores',
         'courses' => '/cursos',
         'blog' => '/blog',
+        'news' => '/noticias',
     ],
 
     'isActive' => function ($page, $path) {
@@ -67,10 +68,22 @@ return [
                 return ( ( $item->is_published ?? false ) && \Carbon\Carbon::now() >= Carbon\Carbon::createFromFormat('d/m/Y', $item->date) );
             }
         ],
-        'events' => [
+        'noticias' => [
+            'path' => 'noticias/{date|Y-m-d}/{-title}',
+            'sort' => '-date',
+            'filter' => function ($item) {
+                return ( ( $item->is_published ?? false ) && \Carbon\Carbon::now() >= Carbon\Carbon::createFromFormat('d/m/Y', $item->date) );
+            }
+        ],
+        'eventos' => [
             'sort' => 'date',
             'filter' => function ($item) {
                 return ( ( $item->is_published ?? false ) && \Carbon\Carbon::now() <= Carbon\Carbon::createFromFormat('d/m/Y', $item->date) );
+            }
+        ],
+        'feedbacks' => [
+            'filter' => function ($item) {
+                return ( $item->is_published ?? false ) ;
             }
         ],
     ],

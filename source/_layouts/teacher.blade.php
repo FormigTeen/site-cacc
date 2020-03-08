@@ -71,7 +71,9 @@
                 </div>
                 @isset($page['image_url'])
                     <div class="col-md-4 col-lg-5">
-                        <p><img src="{{ $page->image_url }}" alt="{{ $page->name }}" class="img-fluid rounded-circle"></p>
+                        <div class="cover cover-circle">
+                            <img src="{{ $page->image_url }}" alt="{{ $page->name }}" class="img-fluid">
+                        </div>
                     </div>
                 @endisset
             </div>

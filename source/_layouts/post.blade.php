@@ -19,17 +19,17 @@
                     @endif
                     <div class="post-meta d-flex align-items-center flex-wrap">
                         <div class="author d-flex align-items-center">
-                            <div class="avatar"><img src="{{ $page->author_image_url }}" alt="{{ $page->author_name }}" class="img-fluid"></div><a href="#" class="name no-anchor-style"><i class="fa fa-user"></i>{{ $author->name }}</a>
+                            <div class="avatar cover"><img src="{{ $page->author_image_url }}" alt="{{ $page->author_name }}" class="img-fluid"></div>><i class="fa fa-user"></i>{{ $page->author_name }}
                         </div>
                         <div class="date"><i class="fa fa-calendar"></i>{{ $page->dateToStr($page->date) }}</div>
-                        <div class="comments"><i class="fa fa-tag-o"></i>{{ $page->category }}</div>
+                        <div class="comments"><i class="fa fa-tag"></i>{{ $page->category }}</div>
                     </div>
                     <div class="text-content markdown">
                         @yield('content')
                     </div>
                     <div class="post-author mt-5">
                         <div class="d-flex">
-                            <div class="avatar"><img src="{{ $page->author_image_url }}" alt="..." class="img-fluid"></div>
+                            <div class="avatar cover"><img src="{{ $page->author_image_url }}" alt="{{ $page->author_name }}" class="img-fluid"></div>
                             <div class="info d-flex justify-content-between">
                                 <div class="left">
                                     <small>Postado por</small><strong>{{ $page->author_name }}</strong>
