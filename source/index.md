@@ -1,6 +1,6 @@
 ---
 extends: _layouts.page
-title: Departamento de Computação da UFBA | DCC
+title: Início
 
 cover:
     - title: Bem vindo ao Departamento de Computação
