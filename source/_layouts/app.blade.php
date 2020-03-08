@@ -21,12 +21,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 d-none d-md-block">
-                    <p class="mb-0"> <i class="icon-placeholder"></i>{{ $page->address }}</p>
+                    <p class="mb-0"> <i class="fa fa-map-marker-alt"></i>{{ $page->address }}</p>
                 </div>
                 <div class="col text-right">
                     <ul class="list-inline mb-0">
-                        <li class="list-inline-item"><a href="mailto:{{ $page->email }}"><i class="icon-envelope"></i>{{ $page->email }}</a></li>
-                        <li class="list-inline-item"><a href="#"><i class="icon-telephone"></i>{{ $page->phone }}</a></li>
+                        <li class="list-inline-item"><a href="mailto:{{ $page->email }}"><i class="fa fa-envelope-alt"></i>{{ $page->email }}</a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-phone-alt"></i>{{ $page->phone }}</a></li>
                     </ul>
                 </div>
             </div>
