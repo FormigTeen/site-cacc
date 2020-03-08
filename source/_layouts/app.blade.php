@@ -117,7 +117,9 @@
     </nav>
 </header>
 
-@includeWhen(!empty($page['cover']), '_components.cover')
+<div class="d-none d-md-block">
+    @includeWhen(!empty($page['cover']), '_components.cover')
+</div>
 
 @section('root')
 @show
