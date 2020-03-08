@@ -115,6 +115,12 @@
             </div>
         </div>
     </nav>
+    <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark mx-0 px-0 bg-success ">
+        <a class="btn btn-primary btn-block btn-lg font-500 br-0" target="blank" href="{{ $page->bot_url }}">
+            <i class="fab fa-telegram m-r-10"></i>FALE CONOSCO
+        </a>
+
+    </nav>
 </header>
 
 <div class="d-none d-md-block">
