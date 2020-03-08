@@ -39,7 +39,7 @@ title: Cursos
                                 <a href="{{ $course->getUrl() }}" class="no-anchor-style">
                                 <h3 class="h5">{{ $course->title }}</h3></a>
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <div class="category"><i class="fa fa-tags"></i><a href="#">{{ $course->category }}</a></div>
+                                    <div class="category"><i class="fa fa-tags"></i>{ $course->category }}</div>
                                 </div>
                             </div>
                             <div class="course-body">

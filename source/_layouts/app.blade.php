@@ -46,11 +46,26 @@
                             Home <span class="sr-only">(current)</span>
                         </a>
                     </div>
-                    <div class="nav-item">
-                        <a href="{{ $page->baseUrl . $page->ROUTES['courses'] }}" class="nav-link {{ $page->isActive($page->baseUrl . $page->ROUTES['courses']) }}">
-                            Cursos <span class="sr-only">(current)</span>
-                        </a>
+
+                    <div class="list-inline-item dropdown menu-large">
+                        <a id="cursos" href="#" data-toggle="dropdown" class="nav-link">Cursos  <i class="fa fa-angle-down"></i></a>
+                        <div aria-labelledby="cursos" class="dropdown-menu megamenu">
+                            <div class="container">
+                                <div class="row">
+                                    @foreach($cursos->groupBy('category') as $category=>$courses)
+                                        <div class="col"><strong class="text-uppercase">{{ $category }}</strong>
+                                            <ul class="list-unstyled">
+                                                @foreach($courses as $course)
+                                                    <li><a href="{{ $course->getUrl() }}">{{ $course->title }}</a></li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="nav-item">
                         <a href="{{ $page->baseUrl . $page->ROUTES['teachers'] }}" class="nav-link {{ $page->isActive($page->baseUrl . $page->ROUTES['teachers']) }}">
                             Professores <span class="sr-only">(current)</span>
@@ -95,47 +110,6 @@
 {{--                        </ul>--}}
 {{--                    </div>--}}
 {{--                    <div class="nav-item"><a href="courses.html" class="nav-link">Courses </a></div>--}}
-{{--                    <div class="list-inline-item dropdown menu-large"><a id="megamenu" href="#" data-toggle="dropdown" class="nav-link">Pages  <i class="fa fa-angle-down"></i></a>--}}
-{{--                        <div aria-labelledby="megamenu" class="dropdown-menu megamenu">--}}
-{{--                            <div class="container">--}}
-{{--                                <div class="row">--}}
-{{--                                    <div class="col-lg-3"><strong class="text-uppercase">Main</strong>--}}
-{{--                                        <ul class="list-unstyled">--}}
-{{--                                            <li><a href="index.html">Homepage</a></li>--}}
-{{--                                            <li><a href="courses.html">Courses</a></li>--}}
-{{--                                            <li><a href="courses-2.html">Courses - table</a></li>--}}
-{{--                                            <li><a href="course-detail.html">Course detail</a></li>--}}
-{{--                                        </ul>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="col-lg-3"><strong class="text-uppercase">Blog & text</strong>--}}
-{{--                                        <ul class="list-unstyled">--}}
-{{--                                            <li><a href="blog.html">Blog</a></li>--}}
-{{--                                            <li><a href="blog-post.html">Blog post</a></li>--}}
-{{--                                            <li><a href="text.html">Text page</a></li>--}}
-{{--                                            <li><a href="staff.html">Staff</a></li>--}}
-{{--                                            <li><a href="staff-detail.html">Staff detail                                                                               </a></li>--}}
-{{--                                        </ul>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="col-lg-3"><strong class="text-uppercase">Just demo </strong>--}}
-{{--                                        <ul class="list-unstyled">--}}
-{{--                                            <li><a href="#">Demo</a></li>--}}
-{{--                                            <li><a href="#">Demo</a></li>--}}
-{{--                                            <li><a href="#">Demo</a></li>--}}
-{{--                                            <li><a href="#">Demo</a></li>--}}
-{{--                                        </ul>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="col-lg-3"><strong class="text-uppercase">Just demo </strong>--}}
-{{--                                        <ul class="list-unstyled">--}}
-{{--                                            <li><a href="#">Demo</a></li>--}}
-{{--                                            <li><a href="#">Demo</a></li>--}}
-{{--                                            <li><a href="#">Demo</a></li>--}}
-{{--                                            <li><a href="#">Demo</a></li>--}}
-{{--                                        </ul>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
 {{--                    <div class="nav-item"><a href="blog.html" class="nav-link">Blog</a></div>--}}
                 </div>
             </div>
