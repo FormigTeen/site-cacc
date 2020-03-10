@@ -1,6 +1,9 @@
 ---
 extends: _layouts.app
 title: Professores
+
+priority: 0
+is_published: true
 ---
 
 @section('root')
@@ -12,7 +15,7 @@ title: Professores
                 <div class="col-lg-12 mb-5">
                     <nav aria-label="breadcrumb" role="navigation">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{ $page->baseUrl . $page->ROUTES['home'] }}">Home</a></li>
+                            <li class="breadcrumb-item"><a href="{{ $page->baseUrl }}">Home</a></li>
                             <li aria-current="page" class="breadcrumb-item active">Professores</li>
                         </ol>
                     </nav>

@@ -8,8 +8,8 @@
                 <div class="col-lg-12">
                     <nav aria-label="breadcrumb" role="navigation">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{ $page->baseUrl . $page->ROUTES['home'] }}">Home</a></li>
-                            <li class="breadcrumb-item"><a href="{{ $page->baseUrl . $page->ROUTES['news'] }}">Notícias</a></li>
+                            <li class="breadcrumb-item"><a href="{{ $page->baseUrl }}">Home</a></li>
+                            <li class="breadcrumb-item"><a href="{{ $pages->where('title', 'Notícias')->first()->getUrl() }}">Notícias</a></li>
                             <li aria-current="page" class="breadcrumb-item active">{{ $page->dateToStr($page->date) }}</li>
                         </ol>
                     </nav>

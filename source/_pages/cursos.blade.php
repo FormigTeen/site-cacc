@@ -1,5 +1,9 @@
 ---
 extends: _layouts.app
+priority: 0
+is_published: true
+show_menu: false
+
 title: Cursos
 ---
 
@@ -13,7 +17,7 @@ title: Cursos
                 <div class="col-lg-12 mb-5">
                     <nav aria-label="breadcrumb" role="navigation">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{ $page->baseUrl . $page->ROUTES['home'] }}">Home</a></li>
+                            <li class="breadcrumb-item"><a href="{{ $page->baseUrl }}">Home</a></li>
                             <li aria-current="page" class="breadcrumb-item active">Cursos</li>
                         </ol>
                     </nav>

@@ -1,6 +1,10 @@
 ---
 extends: _layouts.page
+priority: 0
+is_published: true
+
 title: Colabore
+
 
 author: 
     name: Matheus Freitas

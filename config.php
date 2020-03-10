@@ -27,15 +27,6 @@ return [
 
     'logo_url' => 'http://www.sbrc2016.ufba.br/assets/img/dcc-ufba.png',
 
-    'ROUTES' => [
-        'home' => '/',
-        'teachers' => '/professores',
-        'courses' => '/cursos',
-        'blog' => '/blog',
-        'news' => '/noticias',
-        'colabore' => '/colabore',
-    ],
-
     'isActive' => function ($page, $path) {
         return ( $page->getUrl() ===  $path ? "active" : "" );
     },
@@ -53,7 +44,7 @@ return [
             'path' => '{collection}/{-name}',
             'sort' => 'name',
             'filter' => function ($item) {
-                return $item->is_published ?? false;
+                return ( $item->is_published ?? false );
             }
         ],
         'cursos' => [
@@ -87,6 +78,16 @@ return [
             'filter' => function ($item) {
                 return ( $item->is_published ?? false ) ;
             }
+        ],
+        'pages' => [
+            'path' => '{-title}'
+            'sort' => '-priority|title',
+            'filter' => function ($item) {
+                return ( $item->is_published ?? false ) ;
+            }
+            'priority' => 0,
+            'show_menu' => true,
+            'show_footer' => false,
         ],
     ],
 ];

@@ -35,14 +35,14 @@
     <!-- navbar-->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a href="{{ $page->baseUrl . $page->ROUTES['home'] }}" class="navbar-brand">
+            <a href="{{ $page->baseUrl }}" class="navbar-brand">
                 <img class="logo" src="{{ $page->logo_url }}" alt="{{ $page->title }}" />
             </a>
             <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right mt-0"><span></span><span></span><span></span></button>
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
                 <div class="navbar-nav ml-auto">
                     <div class="nav-item">
-                        <a href="{{ $page->baseUrl . $page->ROUTES['home'] }}" class="nav-link {{ $page->isActive($page->baseUrl . $page->ROUTES['home']) }}">
+                        <a href="{{ $page->baseUrl }}" class="nav-link {{ $page->isActive($page->baseUrl) }}">
                             Home <span class="sr-only">(current)</span>
                         </a>
                     </div>
@@ -66,26 +66,14 @@
                         </div>
                     </div>
 
-                    <div class="nav-item">
-                        <a href="{{ $page->baseUrl . $page->ROUTES['teachers'] }}" class="nav-link {{ $page->isActive($page->baseUrl . $page->ROUTES['teachers']) }}">
-                            Professores <span class="sr-only">(current)</span>
-                        </a>
-                    </div>
-                    <div class="nav-item">
-                        <a href="{{ $page->baseUrl . $page->ROUTES['news'] }}" class="nav-link {{ $page->isActive($page->baseUrl . $page->ROUTES['news']) }}">
-                            Notícias <span class="sr-only">(current)</span>
-                        </a>
-                    </div>
-                    <div class="nav-item">
-                        <a href="{{ $page->baseUrl . $page->ROUTES['blog'] }}" class="nav-link {{ $page->isActive($page->baseUrl . $page->ROUTES['blog']) }}">
-                            Blog <span class="sr-only">(current)</span>
-                        </a>
-                    </div>
-                    <div class="nav-item">
-                        <a href="{{ $page->baseUrl . $page->ROUTES['colabore'] }}" class="nav-link {{ $page->isActive($page->baseUrl . $page->ROUTES['colabore']) }}">
-                            Colabore <span class="sr-only">(current)</span>
-                        </a>
-                    </div>
+                    @foreach($pages as $pageObj)
+                        <div class="nav-item">
+                            <a href="{{ $pageObj->getUrl() }}" class="nav-link {{ $page->isActive($pageObj->getUrl()) }}">
+                                $pageObj->title <span class="sr-only">(current)</span>
+                            </a>
+                        </div>
+                    @endforeach
+
                     <!-- multi-level dropdown-->
 {{--                    <div class="nav-item dropdown"><a id="navbarDropdownMenuLink" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">Dropdown <i class="fa fa-angle-down"></i></a>--}}
 {{--                        <ul aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">--}}

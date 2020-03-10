@@ -6,7 +6,7 @@
         <div class="container">
             <nav aria-label="breadcrumb" role="navigation">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{ $page->baseUrl . $page->ROUTES['home'] }}">Início</a></li>
+                    <li class="breadcrumb-item"><a href="{{ $page->baseUrl }}">Início</a></li>
                     <li class="breadcrumb-item"><a href="{{ $page->baseUrl . $page->ROUTES['courses'] }}">Cursos</a></li>
                     <li aria-current="page" class="breadcrumb-item active">{{ $page->title }}</li>
                 </ol>
