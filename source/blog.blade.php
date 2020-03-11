@@ -26,7 +26,7 @@ title: Blog
                     </div>
                     <div class="row mt-5">
 
-                        @foreach($posts as $post)
+                        @foreach($pagination->items as $post)
                         <div class="col-md-6">
                             <div class="blog-post">
                                 <div class="image cover">
@@ -56,15 +56,19 @@ title: Blog
                             @if($pagination->previous)
                                 <li class="page-item"><a href="{{ $page->baseUrl . $pagination->previous }}" aria-label="Previous" class="page-link"><span aria-hidden="true">«</span><span class="sr-only">Anterior</span></a></li>
                             @endif
-                            @for($i = $pagination->currentPage ; $i > 1 && $i >= $i - 3 ; $i-- )
-                                <li class="page-item"><a href="{{ $pagination->path[$i] }}" class="page-link">{{ $i }}</a></li>
+                            @for($i = $pagination->currentPage - 2 ; $i < $pagination->currentPage ; $i++ )
+                                @if ( $i > 1 )
+                                    <li class="page-item"><a href="{{ $pagination->path[$i] }}" class="page-link">{{ $i }}</a></li>
+                                @endif
                             @endfor
-                            <li class="page-item">{{ $pagination->currentPage }}</li>
-                            @for($i = $pagination->currentPage ; $i < $pagination->totalPages && $i <= $i - 3 ; $i++ )
-                                <li class="page-item"><a href="{{ $pagination->path[$i] }}" class="page-link">{{ $i }}</a></li>
+                                <li class="page-item"><a href="{{ $page->getUrl() }}" class="page-link disabled"><b>{{ $pagination->currentPage }}</b></a></li>
+                            @for($i = $pagination->currentPage + 2 ; $i > $pagination->currentPage ; $i-- )
+                                    @if ( $i < $pagination->totalPages )
+                                        <li class="page-item"><a href="{{ $pagination->path[$i] }}" class="page-link">{{ $i }}</a></li>
+                                    @endif
                             @endfor
                             @if($pagination->next)
-                                <li class="page-item"><a href="{{ $page->baseUrl . $pagination->previous }}" aria-label="Previous" class="page-link"><span aria-hidden="true">«</span><span class="sr-only">Próxima</span></a></li>
+                                <li class="page-item"><a href="{{ $page->baseUrl . $pagination->next }}" aria-label="Next" class="page-link"><span aria-hidden="true">»</span><span class="sr-only">Próxima</span></a></li>
                             @endif
                         </ul>
                     </nav>

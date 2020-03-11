@@ -60,7 +60,7 @@ return [
             'path' => '{collection}/{-title}',
             'sort' => 'title',
             'filter' => function ($item) {
-                return $item->is_published ?? false;
+                return $item->is_pGublished ?? false;
             }
         ],
         'posts' => [
