@@ -117,57 +117,6 @@
 
 @section('root')
 @show
-
-@if(!($page->show_events == "false"))
-    <!-- Events Section-->
-    <section class="events">
-        <div class="container">
-            <header class="text-center">
-                <h2> <small>Todos os Nosso Eventos</small>Futuros Eventos
-                </h2>
-                <div class="row text-center">
-                    <p class="col-lg-8 mx-auto">
-                        Você deseja publicar algum evento? Envie o arquivo para ...
-                    </p>
-                </div>
-            </header>
-            <div class="swiper-container events-slider pb-5">
-                <div class="swiper-wrapper">
-
-                    @foreach($eventos as $event)
-                        <div class="swiper-slide">
-                            <div class="event row align-items-center align-items-stretch">
-                                <div class="col-md-6 pr-lg-0">
-                                    <div class="image cover">
-                                        <img src="{{ $event->banner_url }}" alt="{{ $event->title }}">
-                                        <div class="overlay d-flex align-items-end">
-                                            <div class="date">
-                                                <strong>{{ $page->dateToCarbon($event->date)->day }}</strong>
-                                                <span>{{ $page->dateToCarbon($event->date)->format('F Y') }}</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 pl-lg-0">
-                                    <div class="text bg-gray d-flex align-items-center">
-                                        <div class="text-inner">
-                                            <h4>{{ $event->title }}</h4>
-                                            <p>{{ $event->description }}
-                                            </p><a href="{{ $event->link }}" target="_blank" class="btn btn-outline-primary">Saiba mais!</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-
-                </div>
-                <!-- Add Pagination-->
-                <div class="swiper-pagination mt-5"></div>
-            </div>
-        </div>
-    </section>
-@endif
 @if(!($page->show_news == "false"))
 <!-- News Section-->
 <section class="latest-news">
@@ -250,6 +199,56 @@
             <div class="item col-lg-3 col-md-6"><strong>{{ $page->awards_number }}</strong>
                 <p>Premiações</p>
             </div>
+        </div>
+    </div>
+</section>
+@endif
+
+@if(!($page->show_events == "false"))
+<!-- Events Section-->
+<section class="events">
+    <div class="container">
+        <header class="text-center">
+            <h2> <small>Todos os Nosso Eventos</small>Futuros Eventos
+            </h2>
+            <div class="row text-center">
+                <p class="col-lg-8 mx-auto">
+                    Você deseja publicar algum evento? Envie o arquivo para ...
+                </p>
+            </div>
+        </header>
+        <div class="swiper-container events-slider pb-5">
+            <div class="swiper-wrapper">
+
+                @foreach($eventos as $event)
+                    <div class="swiper-slide">
+                        <div class="event row align-items-center align-items-stretch">
+                            <div class="col-md-6 pr-lg-0">
+                                <div class="image cover"><img src="{{ $event->banner_url }}" alt="{{ $event->title }}">
+                                    <div class="overlay d-flex align-items-end">
+                                        <div class="date">
+                                            <strong>{{ $page->dateToCarbon($event->date)->day }}</strong>
+                                            <span>{{ $page->dateToCarbon($event->date)->format('F Y') }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 pl-lg-0">
+                                <div class="text bg-gray d-flex align-items-center">
+                                    <div class="text-inner">
+                                        <h4>{{ $event->title }}</h4>
+                                        <p>{{ $event->description }}
+                                        </p><a href="{{ $event->link }}" target="_blank" class="btn btn-outline-primary">Saiba mais!</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+
+            </div>
+            <!-- Add Pagination-->
+            <div class="swiper-pagination mt-5"></div>
         </div>
     </div>
 </section>
