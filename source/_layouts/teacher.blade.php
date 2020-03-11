@@ -7,8 +7,8 @@
         <div class="container">
             <nav aria-label="breadcrumb" role="navigation">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{ $page->baseUrl }}">Início</a></li>
-                    <li class="breadcrumb-item"><a href="{{ $pages->where('title', 'Professores')->first()->getUrl() }}">Professores</a></li>
+                    <li class="breadcrumb-item"><a href="{{ $page->baseUrl . $page->ROUTES['home'] }}">Início</a></li>
+                    <li class="breadcrumb-item"><a href="{{ $page->baseUrl . $page->ROUTES['teachers'] }}">Professores</a></li>
                     <li aria-current="page" class="breadcrumb-item active">{{ $page->name }}</li>
                 </ol>
             </nav>

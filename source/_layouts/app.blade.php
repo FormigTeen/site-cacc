@@ -35,14 +35,14 @@
     <!-- navbar-->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a href="{{ $page->baseUrl }}" class="navbar-brand">
+            <a href="{{ $page->baseUrl . $page->ROUTES['home'] }}" class="navbar-brand">
                 <img class="logo" src="{{ $page->logo_url }}" alt="{{ $page->title }}" />
             </a>
             <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right mt-0"><span></span><span></span><span></span></button>
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
                 <div class="navbar-nav ml-auto">
                     <div class="nav-item">
-                        <a href="{{ $page->baseUrl }}" class="nav-link {{ $page->isActive($page->baseUrl) }}">
+                        <a href="{{ $page->baseUrl . $page->ROUTES['home'] }}" class="nav-link {{ $page->isActive($page->baseUrl . $page->ROUTES['home']) }}">
                             Home <span class="sr-only">(current)</span>
                         </a>
                     </div>
@@ -66,14 +66,26 @@
                         </div>
                     </div>
 
-                    @foreach($pages as $pageObj)
-                        <div class="nav-item">
-                            <a href="{{ $pageObj->getUrl() }}" class="nav-link {{ $page->isActive($pageObj->getUrl()) }}">
-                                $pageObj->title <span class="sr-only">(current)</span>
-                            </a>
-                        </div>
-                    @endforeach
-
+                    <div class="nav-item">
+                        <a href="{{ $page->baseUrl . $page->ROUTES['teachers'] }}" class="nav-link {{ $page->isActive($page->baseUrl . $page->ROUTES['teachers']) }}">
+                            Professores <span class="sr-only">(current)</span>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="{{ $page->baseUrl . $page->ROUTES['news'] }}" class="nav-link {{ $page->isActive($page->baseUrl . $page->ROUTES['news']) }}">
+                            Notícias <span class="sr-only">(current)</span>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="{{ $page->baseUrl . $page->ROUTES['blog'] }}" class="nav-link {{ $page->isActive($page->baseUrl . $page->ROUTES['blog']) }}">
+                            Blog <span class="sr-only">(current)</span>
+                        </a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="{{ $page->baseUrl . $page->ROUTES['colabore'] }}" class="nav-link {{ $page->isActive($page->baseUrl . $page->ROUTES['colabore']) }}">
+                            Colabore <span class="sr-only">(current)</span>
+                        </a>
+                    </div>
                     <!-- multi-level dropdown-->
 {{--                    <div class="nav-item dropdown"><a id="navbarDropdownMenuLink" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">Dropdown <i class="fa fa-angle-down"></i></a>--}}
 {{--                        <ul aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">--}}
@@ -117,6 +129,57 @@
 
 @section('root')
 @show
+
+@if(!($page->show_events == "false"))
+    <!-- Events Section-->
+    <section class="events">
+        <div class="container">
+            <header class="text-center">
+                <h2> <small>Todos os Nosso Eventos</small>Futuros Eventos
+                </h2>
+                <div class="row text-center">
+                    <p class="col-lg-8 mx-auto">
+                        Você deseja publicar algum evento? Envie o arquivo para ...
+                    </p>
+                </div>
+            </header>
+            <div class="swiper-container events-slider pb-5">
+                <div class="swiper-wrapper">
+
+                    @foreach($eventos as $event)
+                        <div class="swiper-slide">
+                            <div class="event row align-items-center align-items-stretch">
+                                <div class="col-md-6 pr-lg-0">
+                                    <div class="image cover">
+                                        <img src="{{ $event->banner_url }}" alt="{{ $event->title }}">
+                                        <div class="overlay d-flex align-items-end">
+                                            <div class="date">
+                                                <strong>{{ $page->dateToCarbon($event->date)->day }}</strong>
+                                                <span>{{ $page->dateToCarbon($event->date)->format('F Y') }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 pl-lg-0">
+                                    <div class="text bg-gray d-flex align-items-center">
+                                        <div class="text-inner">
+                                            <h4>{{ $event->title }}</h4>
+                                            <p>{{ $event->description }}
+                                            </p><a href="{{ $event->link }}" target="_blank" class="btn btn-outline-primary">Saiba mais!</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+
+                </div>
+                <!-- Add Pagination-->
+                <div class="swiper-pagination mt-5"></div>
+            </div>
+        </div>
+    </section>
+@endif
 @if(!($page->show_news == "false"))
 <!-- News Section-->
 <section class="latest-news">
@@ -199,56 +262,6 @@
             <div class="item col-lg-3 col-md-6"><strong>{{ $page->awards_number }}</strong>
                 <p>Premiações</p>
             </div>
-        </div>
-    </div>
-</section>
-@endif
-
-@if(!($page->show_events == "false"))
-<!-- Events Section-->
-<section class="events">
-    <div class="container">
-        <header class="text-center">
-            <h2> <small>Todos os Nosso Eventos</small>Futuros Eventos
-            </h2>
-            <div class="row text-center">
-                <p class="col-lg-8 mx-auto">
-                    Você deseja publicar algum evento? Envie o arquivo para ...
-                </p>
-            </div>
-        </header>
-        <div class="swiper-container events-slider pb-5">
-            <div class="swiper-wrapper">
-
-                @foreach($eventos as $event)
-                    <div class="swiper-slide">
-                        <div class="event row align-items-center align-items-stretch">
-                            <div class="col-md-6 pr-lg-0">
-                                <div class="image cover"><img src="{{ $event->banner_url }}" alt="{{ $event->title }}">
-                                    <div class="overlay d-flex align-items-end">
-                                        <div class="date">
-                                            <strong>{{ $page->dateToCarbon($event->date)->day }}</strong>
-                                            <span>{{ $page->dateToCarbon($event->date)->format('F Y') }}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 pl-lg-0">
-                                <div class="text bg-gray d-flex align-items-center">
-                                    <div class="text-inner">
-                                        <h4>{{ $event->title }}</h4>
-                                        <p>{{ $event->description }}
-                                        </p><a href="{{ $event->link }}" target="_blank" class="btn btn-outline-primary">Saiba mais!</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-
-            </div>
-            <!-- Add Pagination-->
-            <div class="swiper-pagination mt-5"></div>
         </div>
     </div>
 </section>
