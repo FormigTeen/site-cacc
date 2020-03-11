@@ -68,7 +68,7 @@ return [
                 return ( ( $item->is_published ?? false ) && \Carbon\Carbon::now() >= Carbon\Carbon::createFromFormat('d/m/Y', $item->date) );
             }
         ],
-        'eventos' => [
+        'eventos' => [ gi
             'sort' => 'date',
             'filter' => function ($item) {
                 return ( ( $item->is_published ?? false ) && \Carbon\Carbon::now() <= Carbon\Carbon::createFromFormat('d/m/Y', $item->date) );
