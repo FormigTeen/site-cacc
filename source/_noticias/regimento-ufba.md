@@ -3,11 +3,11 @@ extends: _layouts.news
 section: content
 is_published: true
 
-scope: 0
+scope: 1
 
-date: 12/04/2019
-title: UFBA abre 100 Bolsas para IC
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Augue interdum velit euismod in pellentesque massa. In mollis nunc sed id. 
+date: 12/05/2020
+title: Novo Regimento Interno entra em votação
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Augue interdum velit euismod in pellentesque massa. In mollis nunc s
 banner_url: https://www.yu.edu/sites/default/files/ThinkstockPhotos-853673106.jpg
 category: Extensão
 

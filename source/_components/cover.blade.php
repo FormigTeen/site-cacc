@@ -30,25 +30,25 @@
         <div class="row">
             <a href="#"class="info-box red col-lg-3">
                 <div class="info-box-content">
-                    <h3 class="text-uppercase">Programs</h3>
+                    <h3 class="text-uppercase">Pesquisa</h3>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
             </a>
             <a href="#" class="info-box cyan col-lg-3">
                 <div class="info-box-content">
-                    <h3 class="text-uppercase">Affordability</h3>
+                    <h3 class="text-uppercase">Ensino</h3>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
             </a>
             <a href="#"  class="info-box yellow col-lg-3">
                 <div class="info-box-content">
-                    <h3 class="text-uppercase">Certification</h3>
+                    <h3 class="text-uppercase">Extensão</h3>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
             </a>
             <a href="#" class="info-box green col-lg-3">
                 <div class="info-box-content">
-                    <h3 class="text-uppercase">Certification</h3>
+                    <h3 class="text-uppercase">Inovação</h3>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
             </a>

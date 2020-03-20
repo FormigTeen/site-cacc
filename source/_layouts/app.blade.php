@@ -139,7 +139,7 @@
                 </h2>
                 <div class="row text-center">
                     <p class="col-lg-8 mx-auto">
-                        Você deseja publicar algum evento? Envie o arquivo para ...
+                        Você deseja publicar algum evento? <a href="/colabore">Entre aqui</a>
                     </p>
                 </div>
             </header>

@@ -5,8 +5,8 @@ is_published: true
 
 scope: 0
 
-date: 12/04/2019
-title: UFBA abre 100 Bolsas para IC
+date: 12/10/2019
+title: Curso de ACCS recebem alunos de escolas públicas e privadas
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Augue interdum velit euismod in pellentesque massa. In mollis nunc sed id. 
 banner_url: https://www.yu.edu/sites/default/files/ThinkstockPhotos-853673106.jpg
 category: Extensão
