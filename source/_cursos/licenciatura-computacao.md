@@ -3,10 +3,10 @@ extends: _layouts.course
 section: content
 is_published: true
 
-title: Ciência da Computação
+title: Computação
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 banner_url: https://www.yu.edu/sites/default/files/ThinkstockPhotos-853673106.jpg
-category: Gradução | Bacharelado
+category: Gradução | Licenciatura
 duration: 4 Anos
 site_ufba_url: https://ufba.br/cursos/ciencia-da-computacao
 grade_url: https://www.meuhorarioufba.com.br/curso/112140

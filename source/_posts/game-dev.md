@@ -1,15 +1,20 @@
 ---
-extends: _layouts.course
+extends: _layouts.post
 section: content
 is_published: true
 
-title: Ciência da Computação
+date: 2020-02-12
+
+title: Quer desenvolver um jogo? Saiba por onde começar!
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-banner_url: https://www.yu.edu/sites/default/files/ThinkstockPhotos-853673106.jpg
-category: Gradução | Bacharelado
-duration: 4 Anos
-site_ufba_url: https://ufba.br/cursos/ciencia-da-computacao
-grade_url: https://www.meuhorarioufba.com.br/curso/112140
+banner_url: https://cdn.windowsreport.com/wp-content/uploads/2018/11/gaming-programming-software.png
+category: Jogos
+author_image_url: https://lh3.googleusercontent.com/proxy/VkK1GJhUSRWeZiK0zkjGzU2zhq9kWLEDMKo_TukP1Mo0VmD9RyhhWm9QVk1f1DeNJIykDxjX7080lc8QtKwzLXpNLJkz-sEStWcaC1k1DPM629DMK4-iXlyADC7D8hMChxaEdSCUyPcQMwO4XePBPvNaGBYXJgrqiXtI6JPQDSdyF4M6c2G7x20gsU8
+author_name: Rodrigo Rocha
+author_description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+#author_facebook:
+#author_twitter:
+author_github: http://gitlab.com/formigteen
 
 ---
 

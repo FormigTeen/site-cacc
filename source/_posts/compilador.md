@@ -1,15 +1,20 @@
 ---
-extends: _layouts.course
+extends: _layouts.post
 section: content
 is_published: true
 
-title: Ciência da Computação
+date: 2020-03-02
+
+title: O que os compiladores dizem sobre suas palavras?
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-banner_url: https://www.yu.edu/sites/default/files/ThinkstockPhotos-853673106.jpg
-category: Gradução | Bacharelado
-duration: 4 Anos
-site_ufba_url: https://ufba.br/cursos/ciencia-da-computacao
-grade_url: https://www.meuhorarioufba.com.br/curso/112140
+banner_url: https://static1.squarespace.com/static/579ac9449f7456e9f31d673c/579acc2615d5dbe122c9f613/59cc5b9c3e00be80b50e64cd/1506565533240/shutterstock_640006990.jpg?format=1500w
+category: Compiladores
+author_image_url: http://www.cienciaecultura.ufba.br/agenciadenoticias/wp-content/uploads/2017/06/servletrecuperafoto-1.png
+author_name: Christina von Flach
+author_description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+#author_facebook:
+#author_twitter:
+author_github: http://gitlab.com/formigteen
 
 ---
 
