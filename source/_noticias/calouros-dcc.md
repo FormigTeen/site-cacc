@@ -3,7 +3,7 @@ extends: _layouts.news
 section: content
 is_published: true
 
-scope: 0
+scope: 2
 
 date: 06/10/2019
 title: Calouros do DCC instalam o Linux gratuitamente em comunidades e creches

@@ -227,7 +227,7 @@
             </div>
             <div id="pills-prospects" role="tabpanel" aria-labelledby="prospects-tab" class="tab-pane fade">
                 <div class="row">
-                    @foreach($noticias->where('scope', 1)->take(3) as $news)
+                    @foreach($noticias->where('scope', 2)->take(3) as $news)
                         <div class="col-lg-4">
                             <div class="news-block">
                                 <div class="news-block-inner bg-gray">

@@ -3,7 +3,7 @@ extends: _layouts.news
 section: content
 is_published: true
 
-scope: 0
+scope: 2
 
 date: 12/10/2019
 title: Curso de ACCS recebem alunos de escolas públicas e privadas
