@@ -196,7 +196,7 @@
             <div id="pills-students" role="tabpanel" aria-labelledby="students-tab" class="tab-pane fade show active">
                 <div class="row">
 
-                    @foreach($noticias->where('scope', 0)->take(3) as $news)
+                    @foreach($noticias->where('scope', 0)->take(3)->sortByDesc('date') as $news)
                         <div class="col-lg-4">
                             <div class="news-block">
                                 <div class="news-block-inner bg-gray">
@@ -212,7 +212,7 @@
             </div>
             <div id="pills-teachers" role="tabpanel" aria-labelledby="teachers-tab" class="tab-pane fade">
                 <div class="row">
-                    @foreach($noticias->where('scope', 1)->take(3) as $news)
+                    @foreach($noticias->where('scope', 1)->take(3)->sortByDesc('date') as $news)
                         <div class="col-lg-4">
                             <div class="news-block">
                                 <div class="news-block-inner bg-gray">
@@ -227,7 +227,7 @@
             </div>
             <div id="pills-prospects" role="tabpanel" aria-labelledby="prospects-tab" class="tab-pane fade">
                 <div class="row">
-                    @foreach($noticias->where('scope', 2)->take(3) as $news)
+                    @foreach($noticias->where('scope', 2)->take(3)->sortByDesc('date') as $news)
                         <div class="col-lg-4">
                             <div class="news-block">
                                 <div class="news-block-inner bg-gray">

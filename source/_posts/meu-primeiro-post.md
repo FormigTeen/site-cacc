@@ -3,7 +3,7 @@ extends: _layouts.post
 section: content
 is_published: true
 
-date: 12/12/2019
+date: 2019-12-12
 
 title: Meu primeiro Post
 description: Esse curso é sobre Matemática e Computação, entende?

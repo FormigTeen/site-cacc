@@ -5,7 +5,7 @@ is_published: true
 
 scope: 0
 
-date: 12/05/2019
+date: 2019-05-12
 title: Empresas Juniores de Computação iniciam Processo Seletivo
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Augue interdum velit euismod in pellentesque massa. In mollis nunc sed id. 
 banner_url: https://www.yu.edu/sites/default/files/ThinkstockPhotos-853673106.jpg

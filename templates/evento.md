@@ -7,7 +7,7 @@ is_published: true
 title: Meu segundo Post
 
 # Data da Evento
-date: 12/12/2021
+date: 2019-03-21
 
 # Descrição Curta do Evento
 description: Esse curso é sobre Matemática e Computação, entende?

@@ -5,7 +5,7 @@ is_published: true
 
 scope: 1
 
-date: 12/05/2020
+date: 2020-02-12
 title: Novo Regimento Interno entra em votação
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Augue interdum velit euismod in pellentesque massa. In mollis nunc s
 banner_url: https://www.yu.edu/sites/default/files/ThinkstockPhotos-853673106.jpg

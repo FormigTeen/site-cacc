@@ -11,7 +11,7 @@ is_published: true
 scope: 0
 
 # Data da Notícia
-date: 12/04/2019
+date: 2019-03-21
 
 # Título da Notícia
 title: Meu segundo Post

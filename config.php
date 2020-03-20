@@ -41,11 +41,11 @@ return [
     },
 
     'dateToStr' => function ($page, $date) {
-        return Carbon\Carbon::createFromFormat('d/m/Y', $date)->format('d \d\e F \d\e Y');
+        return Carbon\Carbon::parse($date)->format('d \d\e F \d\e Y');
     },
 
     'dateToCarbon' => function ($page, $date) {
-        return Carbon\Carbon::createFromFormat('d/m/Y', $date);
+        return Carbon\Carbon::parse($date);
     },
 
     'collections' => [
@@ -60,27 +60,27 @@ return [
             'path' => '{collection}/{-title}',
             'sort' => 'title',
             'filter' => function ($item) {
-                return $item->is_pGublished ?? false;
+                return $item->is_published ?? false;
             }
         ],
         'posts' => [
             'path' => 'blog/post/{-title}',
             'sort' => '-date',
             'filter' => function ($item) {
-                return ( ( $item->is_published ?? false ) && \Carbon\Carbon::now() >= Carbon\Carbon::createFromFormat('d/m/Y', $item->date) );
+                return ( ( $item->is_published ?? false ) && \Carbon\Carbon::now()->timestamp >= $item->date );
             }
         ],
         'noticias' => [
-            'path' => 'noticias/{date|Y-m-d}/{-title}',
+            'path' => 'noticias/date/{-title}',
             'sort' => '-date',
             'filter' => function ($item) {
-                return ( ( $item->is_published ?? false ) && \Carbon\Carbon::now() >= Carbon\Carbon::createFromFormat('d/m/Y', $item->date) );
+                return ( ( $item->is_published ?? false ) && \Carbon\Carbon::now()->timestamp >= $item->date);
             }
         ],
         'eventos' => [
             'sort' => 'date',
             'filter' => function ($item) {
-                return ( ( $item->is_published ?? false ) && \Carbon\Carbon::now() <= Carbon\Carbon::createFromFormat('d/m/Y', $item->date) );
+                return ( ( $item->is_published ?? false ) && \Carbon\Carbon::now()->timestamp <= $item->date);
             }
         ],
         'feedbacks' => [
