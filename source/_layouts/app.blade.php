@@ -156,7 +156,7 @@
                     @foreach($eventos as $event)
                         <div class="swiper-slide">
                             <div class="event row align-items-center align-items-stretch">
-                                <div class="col-lg-6 col-sm-12 pr-lg-0">
+                                <div class="col-lg-12 col-sm-6 pr-lg-0">
                                     <div class="image cover">
                                         <img src="{{ $event->banner_url }}" alt="{{ $event->title }}">
                                         <div class="overlay d-flex align-items-end">
@@ -167,7 +167,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-sm-12 pl-lg-0">
+                                <div class="col-lg-12 col-sm-6 pl-lg-0">
                                     <div class="text bg-gray d-flex align-items-center">
                                         <div class="text-inner">
                                             <h4>{{ $event->title }}</h4>
