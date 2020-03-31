@@ -25,7 +25,7 @@ return [
 //        'telegram' => '',
     ],
 
-    'logo_url' => 'https://www.sbrc2016.ufba.br/assets/img/dcc-ufba.png',
+    'logo_url' => 'https://i.imgur.com/XrcGZbH.png',
 
     'ROUTES' => [
         'home' => '/',
