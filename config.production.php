@@ -2,5 +2,5 @@
 
 return [
     'production' => true,
-    'baseUrl' => '/dcc-ufba-site',
+    'baseUrl' => 'https://formigteen.gitlab.io/dcc-ufba-site',
 ];

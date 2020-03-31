@@ -7,7 +7,7 @@ is_published: true
 name: Vaninha Vieira
 short_description: Coordenadora do Departamento de Ciência da Computação da UFBA
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-image_url: http://www.cienciaecultura.ufba.br/agenciadenoticias/wp-content/uploads/2017/06/vaninha.jpg
+image_url: https://www.cienciaecultura.ufba.br/agenciadenoticias/wp-content/uploads/2017/06/vaninha.jpg
 #lates_url: 
 social_media:
     email: msformigteen@live.com

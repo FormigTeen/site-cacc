@@ -9,7 +9,7 @@ title: O 3 erros dos calouros no curso de computação
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 banner_url: 
 category: Estudantes
-author_image_url: http://www.cienciaecultura.ufba.br/agenciadenoticias/wp-content/uploads/2017/06/vaninha.jpg
+author_image_url: https://www.cienciaecultura.ufba.br/agenciadenoticias/wp-content/uploads/2017/06/vaninha.jpg
 author_name: Vaninha Vieira
 author_description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 #author_facebook:
