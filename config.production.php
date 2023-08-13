@@ -2,5 +2,5 @@
 
 return [
     'production' => true,
-    'baseUrl' => 'https://dcc.formigteen.dev',
+    'baseUrl' => 'https://formigteen.github.io/site-cacc',
 ];
